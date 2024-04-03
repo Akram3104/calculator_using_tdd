@@ -1,5 +1,5 @@
 import unittest
-from calculator import addition,subtraction,multiply,divide,logarithm
+from calculator import addition,subtraction,multiply,divide,logarithm,square_root
 
 class TestCalculator(unittest.TestCase):
     def test_addition(self):
@@ -21,6 +21,10 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(logarithm(1), 0.0)
         self.assertAlmostEqual(logarithm(10), 2.303)
         self.assertAlmostEqual(logarithm(-1), "Error: Logarithm is not defined for non-positive numbers!")
+    def test_square_root(self):
+        self.assertAlmostEqual(square_root(25), 5.0)
+        self.assertAlmostEqual(square_root(-1), "Error: Square root is not defined for negative numbers!")
+
 
 
 
